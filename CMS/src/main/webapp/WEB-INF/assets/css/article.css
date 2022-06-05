@@ -1,0 +1,95 @@
+.accordionn {
+    background-color: #333333;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 12px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 17px;
+    line-height: 30px;
+    transition: 0.4s;
+}
+.accordionn a{
+    color: #fff;
+}
+
+.accordionn.active, .accordionn:hover {
+    background-color: #808080;
+}
+
+.accordionn:after {
+    content: '\002B';
+    color: #fff;
+    font-weight: bold;
+    float: right;
+    font-size: 26px;
+}
+
+.accordionn.active:after {
+    content: "\2212";
+}
+
+.myPanel {
+    background-color: rgba(0, 0, 0,0.5);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin:0 40px 0 0;
+    padding: 0 30px;
+    text-align: left;
+}
+
+.myPanel >div {
+    padding:30px 40px;
+}
+
+td.for{
+    width: 15%;
+    padding-left: 50px;
+}
+
+.articleContent{
+    margin: 30px 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0,0.5);
+}
+.articleContent h2 {
+    font-size: 30px;
+}
+
+.articleContent h4 {
+    font-size: 20px;
+    padding-top: 10px;
+    color: #c4e3f3;
+}
+.table{
+    width: 90%;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+form {
+    background-color: rgba(30,30,30,0.3);
+    margin: 30px auto;
+    border: 0;
+    width: 80%;
+}
+
+.form-group {
+    padding: 30px 20px;
+}
+
+.controls {
+    color: #333333;
+}
+
+.forAdmin{
+    float: right;
+    padding: 10px;
+}
+.save {
+    float: none;
+    /* margin: 40px 30px; */
+}

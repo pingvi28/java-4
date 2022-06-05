@@ -1,0 +1,18 @@
+#Spring properties
+spring.profiles.active=jsp
+spring.main.allow-bean-definition-overriding=true
+logging.level.web=DEBUG
+
+#DB Properties
+db.username =
+db.password =
+db.driver = org.postgresql.Driver
+db.url =
+
+#Hibernate Configuration:
+hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+hibernate.show_sql=true
+entitymanager.packages.to.scan = ru.kpfu.itis.kashapova.models
+hibernate.hbm2ddl.auto =update
+hibernate.enable_lazy_load_no_trans=true
+hibernate.id.new_generator_mappings=true

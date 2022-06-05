@@ -1,0 +1,45 @@
+/* Intro */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url("../images/image1.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+h1{
+    max-width: 880px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    size: 27px;
+    padding: 100px 50px;
+}
+.container{
+    padding: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #f0f0f0;
+}
+
+.container-fluid {
+    background-color: #06357a;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #204d74;
+    background-color: #06357a;
+}
+form {
+    width: 40%;
+    padding-bottom: 0;
+}
+
+/* Button */
+.btn {
+    color: #06357a ;
+}
