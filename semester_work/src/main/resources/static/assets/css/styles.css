@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+body {
+  background-color: #cfe2ff;
+  height: 100%;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.content {
+  flex: 1 0 auto;
+  margin: 20px;
+}
+.right_navbar{
+  display: inline-block;
+  float: right;
+  display: flex;
+  margin: 0 10px 0 auto;
+}
+
+.header-dark .navbar .action-button, .header-dark .navbar .action-button:active{
+  padding: 8px 10px;
+  margin: 0 5px;
+}
+
+
