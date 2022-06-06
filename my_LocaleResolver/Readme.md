@@ -1,3 +1,8 @@
+не знаю, засчитается ли семестрвока как 3 задние
+- [как jpql](https://github.com/pingvi28/java-4/blob/main/semester_work/src/main/java/ru/kpfu/itis/kashapova/repository/UserStatisticRepository.java)
+если нет, не страшно =)
+
+## 5 Задание 
 ## I 
 <p align="center"><img src="https://github.com/pingvi28/java-4/blob/main/my_LocaleResolver/img/1.png" width="1000"></p>
 <p align="center"><img src="https://github.com/pingvi28/java-4/blob/main/my_LocaleResolver/img/2.png" width="1000"></p>
