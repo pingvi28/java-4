@@ -34,7 +34,6 @@ public class MainController {
 
     @RequestMapping(value = "/{locale:EN|RU}/login2")
     public String login2(Model model, @PathVariable String locale) {
-        System.out.println(localService.findLocalByLanguage(locale).getSubmit());
         model.addAttribute("local", localService.findLocalByLanguage(locale));
         return "login2";
     }

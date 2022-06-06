@@ -14,8 +14,9 @@ public class LocalService {
     public Local findLocalByLanguage(String lang){
         try{
             return localRepository.find(lang);
-        }catch (NullPointerException ex){
+        }catch (Exception ex){
             return localRepository.find("EN");
         }
     }
 }
+

@@ -23,7 +23,7 @@ public class LocaleResolverUrl implements LocaleResolver {
         }
         // Rus
         if (uri.startsWith(request.getServletContext().getContextPath() + "/ru/")) {
-            locale = new Locale("ru", "RU");;
+            locale = new Locale("ru", "RU");
         }
 
         if (locale != null) {
