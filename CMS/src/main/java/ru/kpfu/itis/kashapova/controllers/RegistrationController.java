@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.util.UriComponentsBuilder;
 import ru.kpfu.itis.kashapova.services.RegistrationService;
-import ru.kpfu.itis.kashapova.exceptions.NotEqualPasswordsException;
+import ru.kpfu.itis.kashapova.exceptions.PasswordsDoNotMatchException;
 import ru.kpfu.itis.kashapova.models.User;
 
 import javax.validation.Valid;
@@ -43,7 +43,7 @@ public class RegistrationController {
                 return "redirect:" + UriComponentsBuilder.fromPath("/").build();
             } catch (DuplicateKeyException ex) {
                 result.rejectValue("email", "entry.duplicate", "Аккаунт с токой почтой уже существует");
-            } catch (NotEqualPasswordsException e) {
+            } catch (PasswordsDoNotMatchException e) {
                 result.rejectValue("passwordRepeat", "entry.duplicate", "Пароли не совпадают");
             }
         }

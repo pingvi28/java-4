@@ -5,31 +5,22 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 
-<t:mainLayout title="Редактирование" css="article.css">
+<t:mainTag title="Редактирование" css="article.css">
 
     <form:form class="form-horizontal" method="POST" modelAttribute="article">
 
-        <t:input label="Name" path="name" required="true">
+        <t:inputTag label="Name" path="name" required="true">
             ${article.getName()}
-        </t:input>
-
-        <br>
-        <br>
-        <br>
-
-        <t:textarea label="Сontent" path="content" id="content" required="true">
+        </t:inputTag>
+        <br><br><br>
+        <t:textareaTag label="Сontent" path="content" id="content" required="true">
             ${article.getContent()}
-        </t:textarea>
-
-        <br>
-        <br>
-
+        </t:textareaTag>
+        <br><br>
         <c:if test="${not empty message}">
             <div class="global-message">${message}</div>
         </c:if>
-
-        <br>
-        <br>
+        <br><br>
 
         <input type="submit" class="btn" value="Сохранить статью">
     </form:form>
@@ -43,5 +34,5 @@
             });
     </script>
 
-</t:mainLayout>
+</t:mainTag>
 

@@ -1,9 +1,9 @@
 <%@tag description="Extended input tag to allow for sophisticated errors and Bootstrap theming" pageEncoding="UTF-8" %>
 
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@attribute name="path" required="true" type="java.lang.String" %>
 <%@attribute name="cssClass" required="false" type="java.lang.String" %>

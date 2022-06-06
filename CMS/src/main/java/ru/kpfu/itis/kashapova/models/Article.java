@@ -5,7 +5,6 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
-import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -14,7 +13,7 @@ import java.util.Objects;
 
 @DynamicUpdate
 @Entity
-@Table(name = "article", schema = "public")
+@Table(name = "article")
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +22,7 @@ public class Article {
     @NotBlank
     @Column(unique = true)
     private String slug;
+
     @Column
     @NotBlank
     private String title;
@@ -31,7 +31,6 @@ public class Article {
     private String name;
 
     @Column(length = 10000000)
-    @NotEmpty
     private String content;
 
     @Column
@@ -42,7 +41,11 @@ public class Article {
 
     @Override
     public String toString() {
-        return name;
+        return "Article{" +
+                "slug='" + slug + '\'' +
+                ", title='" + title + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     @Override
@@ -61,7 +64,6 @@ public class Article {
     public Integer getId() {
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }
@@ -69,7 +71,6 @@ public class Article {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -77,7 +78,6 @@ public class Article {
     public String getContent() {
         return content;
     }
-
     public void setContent(String text) {
         this.content = text;
     }
@@ -85,7 +85,6 @@ public class Article {
     public String getCreatingTime() {
         return creatingTime;
     }
-
     public void setCreatingTime(String date) {
         this.creatingTime = date;
     }
@@ -93,7 +92,6 @@ public class Article {
     public Role getRole() {
         return role;
     }
-
     public void setRole(Role role) {
         this.role = role;
     }
@@ -101,7 +99,6 @@ public class Article {
     public String getSlug() {
         return slug;
     }
-
     public void setSlug(String slug) {
         this.slug = slug;
     }
@@ -109,7 +106,6 @@ public class Article {
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }

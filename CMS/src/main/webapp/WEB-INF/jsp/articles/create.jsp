@@ -5,13 +5,13 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 
-<t:mainLayout title="Создание" css="article.css">
+<t:mainTag title="Создание" css="article.css">
 
     <form:form class="form-horizontal" method="POST" modelAttribute="article">
 
-        <t:input label="Название статьи" path="name" required="true"/>
+        <t:inputTag label="Название статьи" path="name" required="true"/>
 
-        <t:textarea label="Контент" path="content" id="content" required="true"/>
+        <t:textareaTag label="Контент" path="content" id="content" required="true"/>
 
         <c:if test="${not empty message}">
             <div class="global-message">${message}</div>
@@ -29,6 +29,4 @@
                 console.error(error);
             });
     </script>
-
-</t:mainLayout>
-
+</t:mainTag>

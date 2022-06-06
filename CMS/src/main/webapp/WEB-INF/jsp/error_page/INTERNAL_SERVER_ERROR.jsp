@@ -12,6 +12,6 @@
     <title>Error</title>
 </head>
 
-<t:errorLayout title="500">
+<t:errorTag title="500">
 <h1>500 извините, что-то случилось на сервере</h1>
-</t:errorLayout>
+</t:errorTag>

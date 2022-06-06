@@ -3,15 +3,16 @@ package ru.kpfu.itis.kashapova.models;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import ru.kpfu.itis.kashapova.models.User;
 
 import java.util.Collection;
 import java.util.Collections;
 
-public class UserDetailsAdapter implements UserDetails {
+public class UserDetailsImp implements UserDetails {
 
     private final User user;
 
-    public UserDetailsAdapter(User user) {
+    public UserDetailsImp(User user) {
         this.user = user;
     }
 

@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import ru.kpfu.itis.kashapova.exceptions.AccessDeniedException;
-import ru.kpfu.itis.kashapova.dao.ArticleRepository;
+import ru.kpfu.itis.kashapova.models.User;
+import ru.kpfu.itis.kashapova.repository.ArticleRepository;
 import ru.kpfu.itis.kashapova.exceptions.NotFoundArticleException;
 import ru.kpfu.itis.kashapova.models.Article;
 import ru.kpfu.itis.kashapova.models.Role;
@@ -22,7 +23,7 @@ import java.util.regex.Pattern;
 public class ArticleService {
 
     private static final Pattern WHITESPACE = Pattern.compile("[\\s]");
-    private static final String USER_шв = "user";
+    private static final String USER_ID = "user";
 
     @Autowired
     private ArticleRepository articleRepository;
@@ -44,13 +45,14 @@ public class ArticleService {
         }else{
             article.setRole(Role.USER);
         }
+
         String slug = makeSlug(article.getName());
 
         Optional<Article> articleTemplate = articleRepository.findTopByOrderByIdDesc();
         if (articleTemplate.isPresent()) {
-            slug = USER_шв + (articleTemplate.get().getId() + 1) + slug;
+            slug = USER_ID + (articleTemplate.get().getId() + 1) + slug;
         } else {
-            slug = USER_шв + 1 + slug;
+            slug = USER_ID + 1 + slug;
         }
 
         article.setSlug(slug);

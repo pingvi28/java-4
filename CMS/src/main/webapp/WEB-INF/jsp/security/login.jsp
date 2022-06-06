@@ -4,11 +4,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<t:mainLayout title="Log in" css="login.css">
+<t:mainTag title="Log in" css="login.css">
     <form:form class="form-horizontal" method="POST" modelAttribute="loginForm">
-        <t:input label="E-mail" path="email" required="true"/>
-        <t:password label="Пароль" path="password" required="true"/>
+        <t:inputTag label="E-mail" path="email" required="true"/>
+        <t:passwordTag label="Пароль" path="password" required="true"/>
         <button type="submit" class="btn btn-success">Войти в аккаунт</button>
     </form:form>
-</t:mainLayout>
+</t:mainTag>
 

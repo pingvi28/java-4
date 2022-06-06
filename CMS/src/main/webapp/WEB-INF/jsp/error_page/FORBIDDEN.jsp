@@ -12,6 +12,6 @@
     <title>Error</title>
 </head>
 
-<t:errorLayout title="403">
+<t:errorTag title="403">
     <h1>403. Для получения доступа необходимо авторизоваться</h1>
-</t:errorLayout>
+</t:errorTag>

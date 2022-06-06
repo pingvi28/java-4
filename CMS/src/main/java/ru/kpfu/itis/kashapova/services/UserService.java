@@ -5,8 +5,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import ru.kpfu.itis.kashapova.dao.UserRepository;
-import ru.kpfu.itis.kashapova.models.UserDetailsAdapter;
+import ru.kpfu.itis.kashapova.repository.UserRepository;
+import ru.kpfu.itis.kashapova.models.UserDetailsImp;
 
 @Service
 public class UserService implements UserDetailsService {
@@ -16,7 +16,7 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        return new UserDetailsAdapter(userRepository.findByEmail(email).
+        return new UserDetailsImp(userRepository.findByEmail(email).
                 orElseThrow(() -> new UsernameNotFoundException("Not found")));
     }
 }

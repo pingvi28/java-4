@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="container">
-    <jsp:include page="/WEB-INF/jsp/navConstructor.jsp"/>
+    <jsp:include page="/WEB-INF/jsp/template/navigationTemplate.jsp"/>
     <jsp:doBody/>
 </div>
 </body>

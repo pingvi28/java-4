@@ -11,7 +11,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.util.UriComponentsBuilder;
 import ru.kpfu.itis.kashapova.exceptions.ServerErrorException;
 import ru.kpfu.itis.kashapova.models.Article;
+import ru.kpfu.itis.kashapova.models.User;
 import ru.kpfu.itis.kashapova.services.ArticleService;
+
+import javax.validation.Valid;
 
 /**
  * @RequestMapping  задает адрес, по которму будет доступен контролер
@@ -48,6 +51,7 @@ public class ArticlesController {
     public String create(
             RedirectAttributes redirectAttributes,
             @ModelAttribute("article") Article article,
+            @ModelAttribute("user") User user,
             @RequestParam(defaultValue = "false") boolean checkbox,
             BindingResult result,
             ModelMap map

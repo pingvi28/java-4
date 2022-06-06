@@ -12,6 +12,6 @@
     <title>Error</title>
 </head>
 
-<t:mainLayout title="404" css="error.css">
+<t:mainTag title="404" css="error.css">
     <h1>404. ${slug} не был найден, проверьте еще раз</h1>
-</t:mainLayout>
+</t:mainTag>

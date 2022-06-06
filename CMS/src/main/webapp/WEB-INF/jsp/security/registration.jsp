@@ -4,17 +4,17 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 
-<t:mainLayout title="Registration" css="register.css">
+<t:mainTag title="Registration" css="register.css">
 <div class = "form">
     <form:form class="form-horizontal" method="POST" modelAttribute="user">
-        <t:input label="E-mail" path="email" required="true"/>
-        <t:input label="Имя" path="name" required="true"/>
-        <t:password label="Пароль" path="password" required="true"/>
+        <t:inputTag label="E-mail" path="email" required="true"/>
+        <t:inputTag label="Имя" path="name" required="true"/>
+        <t:passwordTag label="Пароль" path="password" required="true"/>
         <a href="#" class="password-control1"></a>
-        <t:password label="Повторите пароль" path="passwordRepeat" required="true"/>
+        <t:passwordTag label="Повторите пароль" path="passwordRepeat" required="true"/>
 
         <button type="submit" class="btn btn-success">Зарегистрироваться</button>
     </form:form>
 </div>
-</t:mainLayout>
+</t:mainTag>
 

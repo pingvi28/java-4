@@ -6,7 +6,7 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 
-<t:mainLayout title="${article.getTitle()}" css="article.css">
+<t:mainTag title="${article.getTitle()}" css="article.css">
     <div class="articleName">
 
     </div>
@@ -28,5 +28,5 @@
             <a href="<spring:url value="/delete/${article.getSlug()}"/>" class="btn btn-success delete">Удалить статью</a>
         </sec:authorize>
     </sec:authorize>
-</t:mainLayout>
+</t:mainTag>
 

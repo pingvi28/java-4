@@ -6,7 +6,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 
-<t:mainLayout title="Статьи" css="article.css">
+<t:mainTag title="Статьи" css="article.css">
 
     <table class="table">
         <tbody>
@@ -49,5 +49,5 @@
             });
         }
     </script>
-</t:mainLayout>
+</t:mainTag>
 
