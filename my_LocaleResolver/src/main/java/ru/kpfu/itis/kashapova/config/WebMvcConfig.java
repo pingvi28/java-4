@@ -26,18 +26,18 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         return resolver;
     }
 
+    @Bean(name = "localeResolver")
+    public LocaleResolver getLocaleResolver() {
+        LocaleResolver resolver = new LocaleResolverUrl();
+        return resolver;
+    }
+
     @Bean(name = "messageSource")
     public MessageSource getMessageResource() {
         ReloadableResourceBundleMessageSource messageResource = new ReloadableResourceBundleMessageSource();
         messageResource.setBasename("classpath:i18n/messages");
         messageResource.setDefaultEncoding("UTF-8");
         return messageResource;
-    }
-
-    @Bean(name = "localeResolver")
-    public LocaleResolver getLocaleResolver() {
-        LocaleResolver resolver = new LocaleResolverUrl();
-        return resolver;
     }
 
     @Override

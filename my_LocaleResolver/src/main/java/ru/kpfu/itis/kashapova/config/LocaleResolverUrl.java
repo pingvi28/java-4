@@ -1,44 +1,36 @@
 package ru.kpfu.itis.kashapova.config;
 
 import java.util.Locale;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.web.servlet.LocaleResolver;
 
 public class LocaleResolverUrl implements LocaleResolver {
 
-    private static final String URL_LOCALE_ATTRIBUTE_NAME = "URL_LOCALE_ATTRIBUTE_NAME";
+    private static final String ATTRIBUTE_NAME = "url_local";
 
     @Override
     public Locale resolveLocale(HttpServletRequest request) {
         String uri = request.getRequestURI();
-
-        String prefixEn = request.getServletContext().getContextPath() + "/en/";
-        String prefixFr = request.getServletContext().getContextPath() + "/fr/";
-        String prefixRu = request.getServletContext().getContextPath() + "/ru/";
-
         Locale locale = null;
-
         // English
-        if (uri.startsWith(prefixEn)) {
+        if (uri.startsWith(request.getServletContext().getContextPath() + "/en/")) {
             locale = Locale.ENGLISH;
         }
         // French
-        else if (uri.startsWith(prefixFr)) {
+        else if (uri.startsWith(request.getServletContext().getContextPath() + "/fr/")) {
             locale = Locale.FRANCE;
         }
         // Rus
-        if (uri.startsWith(prefixRu)) {
+        if (uri.startsWith(request.getServletContext().getContextPath() + "/ru/")) {
             locale = new Locale("ru", "RU");;
         }
 
         if (locale != null) {
-            request.getSession().setAttribute(URL_LOCALE_ATTRIBUTE_NAME, locale);
+            request.getSession().setAttribute(ATTRIBUTE_NAME, locale);
         }
-        if (locale == null) {
-            locale = (Locale) request.getSession().getAttribute(URL_LOCALE_ATTRIBUTE_NAME);
+        else {
+            locale = (Locale) request.getSession().getAttribute(ATTRIBUTE_NAME);
             if (locale == null) {
                 locale = Locale.ENGLISH;
             }
