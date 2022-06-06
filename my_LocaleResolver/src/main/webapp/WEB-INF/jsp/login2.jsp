@@ -12,7 +12,7 @@
     <title>${local.title}</title>
 </head>
 <body>
-<div style="text-align: right;padding:5px;margin:5px 0px;background:#ccc;">
+<div style="text-align: right;padding:5px;margin:5px 0px;background:#a7c5d9;">
     <p style="font-style:italic; padding: 0 40px"> сообщении из базы данных  </p>
     <a href="/my_LocaleResolver_war/EN/login2">Login (English)</a>
     <a href="/my_LocaleResolver_war/RU/login2">Login (Russia)</a>

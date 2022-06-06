@@ -36,14 +36,14 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Bean(name = "localeResolver")
     public LocaleResolver getLocaleResolver() {
-        LocaleResolver resolver = new UrlLocaleResolver();
+        LocaleResolver resolver = new LocaleResolverUrl();
         return resolver;
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
-        UrlLocaleInterceptor localeInterceptor = new UrlLocaleInterceptor();
+        LocaleInterceptorUrl localeInterceptor = new LocaleInterceptorUrl();
         registry.addInterceptor(localeInterceptor).addPathPatterns("/en/*", "/fr/*", "/ru/*");
     }
 }

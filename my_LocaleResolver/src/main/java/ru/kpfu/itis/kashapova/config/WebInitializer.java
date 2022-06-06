@@ -22,5 +22,4 @@ public class WebInitializer extends AbstractDispatcherServletInitializer {
   protected String[] getServletMappings() {
     return new String[]{"/"};
   }
-
 }

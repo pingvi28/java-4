@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.LocaleResolver;
 
-public class UrlLocaleResolver implements LocaleResolver {
+public class LocaleResolverUrl implements LocaleResolver {
 
     private static final String URL_LOCALE_ATTRIBUTE_NAME = "URL_LOCALE_ATTRIBUTE_NAME";
 

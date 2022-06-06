@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 import java.util.Objects;
 
 @Configuration
-@ComponentScan(basePackages = {"ru.kpfu.itis.kashapova.repository", "ru.kpfu.itis.kashapova.entities"})
+@ComponentScan(basePackages = {"ru.kpfu.itis.kashapova.repository", "ru.kpfu.itis.kashapova.entities","ru.kpfu.itis.kashapova.services"})
 @PropertySource("classpath:/app.properties")
 public class RootConfig extends WebMvcConfigurerAdapter {
 
