@@ -1,0 +1,6 @@
+${pagecontext.request.contextpath} - не сработало при ссылке
+и ваш вариант тоже, к сожалению не смогла исправить данный момент
+поэтому статический контекст my_LocaleResolver_war
+
+те запуск Tomcat:
+http://localhost:808?/my_LocaleResolver_war/en/login
